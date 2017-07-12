@@ -1,0 +1,16 @@
+// Header styling goes here
+
+header {
+  font-size: $font-size-lg;
+  height: 16rem;
+  background: #f7f7f9;
+
+  a:hover {
+    text-decoration: none;
+  }
+
+
+  @include media-breakpoint-down(lg) {
+    font-size: $font-size-base;
+  }
+}

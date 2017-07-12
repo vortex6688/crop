@@ -1,0 +1,18 @@
+// Sidebar styling goes here 
+
+sidebar {
+  position: fixed;
+  top: 0;
+  font-size: $font-size-lg;
+  height: 100%;
+  background: $gray-lightest;
+
+  .nav-item .nav-item {
+    margin: 0rem 1.25rem;
+    border-bottom: 1px rgba(#a8a8a8, .25) solid;
+
+    .nav-link {
+      padding: 0.5em
+    }
+  }
+}

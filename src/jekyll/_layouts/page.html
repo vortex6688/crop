@@ -1,0 +1,64 @@
+---
+layout: page
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{{ site.title }}</title>
+    <meta name="description" content="{{ site.description }}">
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="canonical" href="http://example.com/">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="http://example.com/feed.xml">
+</head>
+
+<body style="max-width: 1440px; margin: 0 auto;">
+
+	{% include header.html %}
+
+    {% include sidebar.html %}
+
+	<div class="page">
+
+        <section class="content">
+            <div class="m-4">
+                {% if page.title %}
+                    <h3 class="text-left my-2">
+                        {% if page.titleIcon %}
+                            <img class="icon-lg mb-2" src="/images/icon-{{page.titleIcon}}.jpg" />
+                        {% endif %}
+                        {{page.title}}
+                    </h3> 
+                {% endif %}
+                {% if page.subTitle %}
+                    <div class="row align-items-center">
+                        <span class="col-3 text-left">
+                            {% if page.navPrev %}
+                                <a href="{{page.navPrevLink}}"><img class="icon mx-2" src="/images/icon-arrow-left.svg" /><b>{{page.navPrev}}</b></a>
+                            {% endif %}
+                        </span>
+                        <h4 class="text-center my-4 col-6">{{page.subTitle}}</h4>
+                        <span class="col-3 text-right">
+                            {% if page.navNext %}
+                                <a href="{{page.navNextLink}}"><b>{{page.navNext}}</b><img class="icon mx-2" src="/images/icon-arrow-right.svg" /></a>
+                            {% endif %}
+                        </span>
+                    </div>
+                {% endif %}
+                <div class="my-4">
+                    {{ content }}
+                </div>
+            </div>
+        </section>
+
+	</div>
+
+	{% include footer.html %}
+</body>
+</html>
