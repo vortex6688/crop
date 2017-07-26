@@ -20,6 +20,7 @@ header {
     top: 0;
     height: 12rem;
     position: fixed;
+    z-index: $zindex-fixed;
     width: 100%;
 
     h1 {
@@ -28,8 +29,8 @@ header {
     
     .mobile-nav-trigger {
       position: absolute;
-      top: 1rem;
-      left: 1rem;
+      top: 0.75rem;
+      left: 0.75rem;
       cursor: pointer;
       z-index: 2000;
     }
@@ -40,53 +41,18 @@ header {
   }
 
   @include media-breakpoint-down(sm) {
-    height: 10rem;
 
     h1 {
       font-size: $font-size-lg;
+      padding-top: 0.5rem;
     }
   }
-/*
-  &.header-mobile {
-    height: 6rem;
-    position: fixed;
-    top: 0;
-    left: 10rem;
-    transition: all .5s ease;
 
-    .logo-mobile {
-      width: 6rem;
-      height: 6rem;
-    }
-    
+  @include media-breakpoint-down(xs) {
+
     h1 {
-      font-size: $font-size-lg;
-    }
-
-    @include media-breakpoint-down(xs) {
-      height: 4.8rem;
-
-      .logo-mobile {
-        width: 4.8rem;
-        height: 4.8rem;
-      }
-
-      h1 {
-        font-size: $font-size-base;
-      }
-      
-    }
-
-    nav {
-      background: $gray-lightest;
-      margin-left: -10rem;
-      width: 10rem;
-      height: 10rem;
+      font-size: 1.125rem;
+      padding-top: 0.7rem;
     }
   }
-
-  &.header-mobile.collapse-mobile {
-    left: 0;
-  }
-  */
 }

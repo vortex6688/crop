@@ -10,7 +10,12 @@ sidebar {
   transition: all .275s ease;
 
   img {
+    width: 100%;
+  }
+
+  .logo {
     width: 16rem;
+    background: $white;
   }
 
   .nav-item .nav-item {
@@ -27,7 +32,7 @@ sidebar {
     margin-left: 0;
     font-size: $font-size-base;
 
-    img {
+    .logo {
       width: 12rem;
     }
 
@@ -40,5 +45,9 @@ sidebar {
     &.collapse-mobile {
       margin-left: -12rem;
     }
+  }
+
+  @include media-breakpoint-down(md) {
+
   }
 }
