@@ -1,0 +1,7 @@
+footer {
+  margin-left: 16rem;
+
+  @include media-breakpoint-down(md) {
+    margin-left: 0;
+  }
+}

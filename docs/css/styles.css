@@ -5986,15 +5986,47 @@ sidebar {
   top: 0;
   font-size: 1.25rem;
   height: 100%;
-  background: #f7f7f9; }
+  background: #f7f7f9;
+  width: 16rem;
+  transition: all .275s ease; }
+  sidebar img {
+    width: 16rem; }
   sidebar .nav-item .nav-item {
-    margin: 0rem 1.25rem;
+    margin: 0rem 1rem;
     border-bottom: 1px rgba(168, 168, 168, 0.25) solid; }
     sidebar .nav-item .nav-item .nav-link {
       padding: 0.5em; }
+  @media (max-width: 991px) {
+    sidebar {
+      width: 12rem;
+      margin-left: 0;
+      font-size: 1rem; }
+      sidebar img {
+        width: 12rem; }
+      sidebar .nav-item .nav-link {
+        padding: 1.325em 0.25em 0.5em; }
+      sidebar.collapse-mobile {
+        margin-left: -12rem; } }
 
 .content {
-  margin-left: 16rem; }
+  margin-left: 16rem;
+  transition: all .275s ease; }
+  @media (max-width: 991px) {
+    .content {
+      margin-left: 0;
+      margin-top: 14rem; }
+      .content .page-title {
+        text-align: center; }
+      .content .page-title-icon {
+        margin-left: -2rem; } }
+  @media (max-width: 991px) {
+    .content {
+      margin-left: 12rem; }
+      .content.collapse-mobile {
+        margin-left: 0; } }
+  @media (max-width: 767px) {
+    .content {
+      margin-top: 11rem; } }
 
 .icon {
   height: 1rem;
@@ -6011,9 +6043,82 @@ sidebar {
 header {
   font-size: 1.25rem;
   height: 16rem;
-  background: #f7f7f9; }
+  margin-left: 16rem;
+  background: #f7f7f9;
+  transition: all .275s ease;
+  /*
+  &.header-mobile {
+    height: 6rem;
+    position: fixed;
+    top: 0;
+    left: 10rem;
+    transition: all .5s ease;
+
+    .logo-mobile {
+      width: 6rem;
+      height: 6rem;
+    }
+    
+    h1 {
+      font-size: $font-size-lg;
+    }
+
+    @include media-breakpoint-down(xs) {
+      height: 4.8rem;
+
+      .logo-mobile {
+        width: 4.8rem;
+        height: 4.8rem;
+      }
+
+      h1 {
+        font-size: $font-size-base;
+      }
+      
+    }
+
+    nav {
+      background: $gray-lightest;
+      margin-left: -10rem;
+      width: 10rem;
+      height: 10rem;
+    }
+  }
+
+  &.header-mobile.collapse-mobile {
+    left: 0;
+  }
+  */ }
   header a:hover {
     text-decoration: none; }
   @media (max-width: 1199px) {
     header {
       font-size: 1rem; } }
+  @media (max-width: 991px) {
+    header {
+      margin-left: 12rem;
+      top: 0;
+      height: 12rem;
+      position: fixed;
+      width: 100%; }
+      header h1 {
+        font-size: 2.4rem; }
+      header .mobile-nav-trigger {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        cursor: pointer;
+        z-index: 2000; }
+      header.collapse-mobile {
+        margin-left: 0; } }
+  @media (max-width: 767px) {
+    header {
+      height: 10rem; }
+      header h1 {
+        font-size: 1.25rem; } }
+
+footer {
+  margin-left: 16rem; }
+  @media (max-width: 991px) {
+    footer {
+      margin-left: 0; } }

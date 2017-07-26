@@ -26,32 +26,34 @@ layout: page
 
 	<div class="page">
 
-        <section class="content">
-            <div class="m-4">
+        <section class="content collapse-mobile">
+            <div class="m-2 m-lg-4">
                 {% if page.title %}
-                    <h3 class="text-left my-2">
+                    <h3 class="page-title my-2">
                         {% if page.titleIcon %}
-                            <img class="icon-lg mb-2" src="/images/icon-{{page.titleIcon}}.jpg" />
+                            <img class="icon-lg mb-2 page-title-icon" src="/images/icon-{{page.titleIcon}}.jpg" />
                         {% endif %}
                         {{page.title}}
                     </h3> 
                 {% endif %}
                 {% if page.subTitle %}
-                    <div class="row align-items-center">
-                        <span class="col-3 text-left">
+                    <div class="row align-items-center my-4">
+                        <span class="text-center col-12">
+                            <h4 style="border-bottom: 1px rgba(168, 168, 168, 0.25) solid; color: #464a4c;" class="mx-2 py-2">{{page.subTitle}}</h4>
+                        </span>
+                        <span class="col-6 text-left">
                             {% if page.navPrev %}
                                 <a href="{{page.navPrevLink}}"><img class="icon mx-2" src="/images/icon-arrow-left.svg" /><b>{{page.navPrev}}</b></a>
                             {% endif %}
                         </span>
-                        <h4 class="text-center my-4 col-6">{{page.subTitle}}</h4>
-                        <span class="col-3 text-right">
+                        <span class="col-6 text-right">
                             {% if page.navNext %}
                                 <a href="{{page.navNextLink}}"><b>{{page.navNext}}</b><img class="icon mx-2" src="/images/icon-arrow-right.svg" /></a>
                             {% endif %}
                         </span>
                     </div>
                 {% endif %}
-                <div class="my-4">
+                <div class="my-4 px-2">
                     {{ content }}
                 </div>
             </div>

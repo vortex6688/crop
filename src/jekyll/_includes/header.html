@@ -1,29 +1,48 @@
-<header style="margin-left: 16rem;">
+<header class="hidden-xs-down collapse-mobile header">
   <section class="row justify-content-center">
+    <img onclick="toggleNav()" class="icon-lg mobile-nav-trigger hidden-lg-up" src="/images/mobile-nav-icon.svg" />
     <div class="col text-center">
-      <div class="row my-2 my-xl-3">
+      <div class="row my-2 my-lg-4">
 	      <h1 class="mx-auto"><a style="color: #e36c0a;" href="/">{{ site.title }}</a></h1>
       </div>
-      <div class="row mt-xl-4 justify-content-around">
-	      <span class="col col-lg-5 col-xl-6 d-flex flex-column">
+      <div class="row mt-2 mt-md-4">
+	      <span class="col-md-6 d-flex flex-column">
           <b><a href="#"><img class="icon mb-1" src="/images/icon-phone.svg" />+7 3812 373-378</a></b>
-          <b>Химические средства защиты растений</b>
-          <span class="row flex-lg-column flex-xl-row mx-auto mt-2">
-            <span><img class="icon mr-1 hidden-xl-up" src="/images/icon-leaf.jpg" />продажи</span>
-            <span><img class="icon mx-xl-1 mr-1" src="/images/icon-leaf.jpg" />консультации</span>
-            <span><img class="icon mx-xl-1 mr-1" src="/images/icon-leaf.jpg" />сопровождение</span>
+          <b class="my-0 my-md-2">Химические средства защиты растений</b>
+          <span class="row mx-auto hidden-sm-down">
+            <span><img class="icon mr-1 hidden-md-up" src="/images/icon-leaf.jpg" />продажи</span>
+            <span><img class="icon mx-md-1 mr-1" src="/images/icon-leaf.jpg" />консультации</span>
+            <span><img class="icon mx-md-1 mr-1" src="/images/icon-leaf.jpg" />сопровождение</span>
           </span>
         </span>
-        <span class="col col-lg-5 col-xl-6 d-flex flex-column">
+        <span class="col-md-6 d-flex flex-column">
           <b><a href="#"><img class="icon-md" src="/images/icon-mail.svg" />td-urojai@mail.ru</a></b>
-          <b>Зерновые, масличные культуры</b>
-          <span class="row flex-lg-column flex-xl-row mx-auto mt-2">
-            <span><img class="icon mr-1 hidden-xl-up" src="/images/icon-wheat.jpg" />закупки</span>
-            <span><img class="icon mx-xl-1 mr-1" src="/images/icon-wheat.jpg" />продажи</span>
-            <span><img class="icon mx-xl-1 mr-1" src="/images/icon-wheat.jpg" />хранение</span>
+          <b class="my-0 my-md-2">Зерновые, масличные культуры</b>
+          <span class="row mx-auto hidden-sm-down">
+            <span><img class="icon mr-1 hidden-md-up" src="/images/icon-wheat.jpg" />закупки</span>
+            <span><img class="icon mx-md-1 mr-1" src="/images/icon-wheat.jpg" />продажи</span>
+            <span><img class="icon mx-md-1 mr-1" src="/images/icon-wheat.jpg" />хранение</span>
           </span>
         </span>
       </div>
     </div>
   </section>
 </header>
+
+<!-- header mobile 
+<header class="hidden-lg-up header-mobile collapse-mobile row w-100 m-0">
+
+  <div class="col d-flex flex-column ml-5 ml-sm-0 text-center">
+    <h1 class="mx-auto my-2"><a style="color: #e36c0a;" href="/">{{ site.title }}</a></h1>
+    <span class="col justify-content-center d-flex flex-wrap" style="font-size: 0.85rem;">
+      <b class="mx-1"><a href="#"><img class="icon" src="/images/icon-phone.svg" />+7 3812 373-378</a></b>
+      <b class="mx-1"><a href="#"><img class="icon-md" src="/images/icon-mail.svg" />td-urojai@mail.ru</a></b>
+    </span>
+  </div>
+
+  <div onclick="toggleNav()" class="" style="position: absolute; cursor: pointer;">
+    <img src="/images/logo.jpg" class="logo-mobile" />
+  </div>
+</header>
+
+-->

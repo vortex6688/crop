@@ -16,29 +16,30 @@
 
 <body style="max-width: 1440px; margin: 0 auto;">
 
-	<header style="margin-left: 16rem;">
+	<header class="hidden-xs-down collapse-mobile header">
   <section class="row justify-content-center">
+    <img onclick="toggleNav()" class="icon-lg mobile-nav-trigger hidden-lg-up" src="/images/mobile-nav-icon.svg" />
     <div class="col text-center">
-      <div class="row my-2 my-xl-3">
+      <div class="row my-2 my-lg-4">
 	      <h1 class="mx-auto"><a style="color: #e36c0a;" href="/">ТОРГОВЫЙ ДОМ «УРОЖАЙ»</a></h1>
       </div>
-      <div class="row mt-xl-4 justify-content-around">
-	      <span class="col col-lg-5 col-xl-6 d-flex flex-column">
+      <div class="row mt-2 mt-md-4">
+	      <span class="col-md-6 d-flex flex-column">
           <b><a href="#"><img class="icon mb-1" src="/images/icon-phone.svg" />+7 3812 373-378</a></b>
-          <b>Химические средства защиты растений</b>
-          <span class="row flex-lg-column flex-xl-row mx-auto mt-2">
-            <span><img class="icon mr-1 hidden-xl-up" src="/images/icon-leaf.jpg" />продажи</span>
-            <span><img class="icon mx-xl-1 mr-1" src="/images/icon-leaf.jpg" />консультации</span>
-            <span><img class="icon mx-xl-1 mr-1" src="/images/icon-leaf.jpg" />сопровождение</span>
+          <b class="my-0 my-md-2">Химические средства защиты растений</b>
+          <span class="row mx-auto hidden-sm-down">
+            <span><img class="icon mr-1 hidden-md-up" src="/images/icon-leaf.jpg" />продажи</span>
+            <span><img class="icon mx-md-1 mr-1" src="/images/icon-leaf.jpg" />консультации</span>
+            <span><img class="icon mx-md-1 mr-1" src="/images/icon-leaf.jpg" />сопровождение</span>
           </span>
         </span>
-        <span class="col col-lg-5 col-xl-6 d-flex flex-column">
+        <span class="col-md-6 d-flex flex-column">
           <b><a href="#"><img class="icon-md" src="/images/icon-mail.svg" />td-urojai@mail.ru</a></b>
-          <b>Зерновые, масличные культуры</b>
-          <span class="row flex-lg-column flex-xl-row mx-auto mt-2">
-            <span><img class="icon mr-1 hidden-xl-up" src="/images/icon-wheat.jpg" />закупки</span>
-            <span><img class="icon mx-xl-1 mr-1" src="/images/icon-wheat.jpg" />продажи</span>
-            <span><img class="icon mx-xl-1 mr-1" src="/images/icon-wheat.jpg" />хранение</span>
+          <b class="my-0 my-md-2">Зерновые, масличные культуры</b>
+          <span class="row mx-auto hidden-sm-down">
+            <span><img class="icon mr-1 hidden-md-up" src="/images/icon-wheat.jpg" />закупки</span>
+            <span><img class="icon mx-md-1 mr-1" src="/images/icon-wheat.jpg" />продажи</span>
+            <span><img class="icon mx-md-1 mr-1" src="/images/icon-wheat.jpg" />хранение</span>
           </span>
         </span>
       </div>
@@ -46,9 +47,27 @@
   </section>
 </header>
 
-    <sidebar class="h-100" style="width: 16rem;">
+<!-- header mobile 
+<header class="hidden-lg-up header-mobile collapse-mobile row w-100 m-0">
+
+  <div class="col d-flex flex-column ml-5 ml-sm-0 text-center">
+    <h1 class="mx-auto my-2"><a style="color: #e36c0a;" href="/">ТОРГОВЫЙ ДОМ «УРОЖАЙ»</a></h1>
+    <span class="col justify-content-center d-flex flex-wrap" style="font-size: 0.85rem;">
+      <b class="mx-1"><a href="#"><img class="icon" src="/images/icon-phone.svg" />+7 3812 373-378</a></b>
+      <b class="mx-1"><a href="#"><img class="icon-md" src="/images/icon-mail.svg" />td-urojai@mail.ru</a></b>
+    </span>
+  </div>
+
+  <div onclick="toggleNav()" class="" style="position: absolute; cursor: pointer;">
+    <img src="/images/logo.jpg" class="logo-mobile" />
+  </div>
+</header>
+
+-->
+
+    <sidebar class="h-100 hidden-sm-down collapse-mobile sidebar">
   <div>
-    <img src="/images/logo.jpg" style="width: 16rem;" />
+    <img src="/images/logo.jpg" />
   </div>
 
   <ul class="p-2 mt-2 nav flex-column">
@@ -92,20 +111,21 @@
   </ul>
 </sidebar>
 
+
 	<div class="page">
 
-        <section class="content">
-            <div class="m-4">
+        <section class="content collapse-mobile">
+            <div class="m-2 m-lg-4">
                 
-                    <h3 class="text-left my-2">
+                    <h3 class="page-title my-2">
                         
-                            <img class="icon-lg mb-2" src="/images/icon-phone.jpg" />
+                            <img class="icon-lg mb-2 page-title-icon" src="/images/icon-phone.jpg" />
                         
                         Контакты
                     </h3> 
                 
                 
-                <div class="my-4">
+                <div class="my-4 px-2">
                     <p><b class="text-primary">ИНН/КПП</b> 5507249481/550701001</p>
 <p><b class="text-primary">Address:</b> г. Омск 644082 ул. Тимирязева, 37,</p>
 <p><b class="text-primary">факс:</b> 373-378;</p>
@@ -133,12 +153,19 @@
 
 	<footer>
 
-	<section class="l-right-aligned">
+	<section class="text-center">
 		<div id='copyright'>
 			Created by Vortex &#169 (2012-2017)
 		</div>
 	</section>
 	
+	<script>
+		function toggleNav() {
+			document.querySelector(".sidebar").classList.toggle('collapse-mobile');
+			document.querySelector(".header").classList.toggle('collapse-mobile');
+			document.querySelector(".content").classList.toggle('collapse-mobile');
+		}
+	</script>
 
 </footer>
 </body>
