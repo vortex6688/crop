@@ -1,11 +1,12 @@
+// Require all the things
 var gulp        = require('gulp');
 var browserSync = require('browser-sync').create();
 var sass        = require('gulp-sass');
 var imagemin    = require('gulp-imagemin');
-var cp          = require('child_process');
+var shell       = require('gulp-shell');
 
 // Static Server + watching scss/html files
-gulp.task('serve', ['build-jekyll', 'sass', 'index', 'images', 'fonts'], function() {
+gulp.task('serve', ['build-jekyll', 'sass', 'images', 'fonts'], function() {
 
     browserSync.init({
         server: "./docs"
@@ -14,22 +15,17 @@ gulp.task('serve', ['build-jekyll', 'sass', 'index', 'images', 'fonts'], functio
     gulp.watch("src/scss/**/*.scss", ['sass']).on('change', browserSync.reload);
     gulp.watch("src/images/**/*.*", ['images']).on('change', browserSync.reload);
     gulp.watch("src/images/**/*.*", ['fonts']).on('change', browserSync.reload);
-    gulp.watch("src/*.html", ['index']).on('change', browserSync.reload);
     gulp.watch("src/jekyll/**/*.html", ['build-jekyll']).on('change', browserSync.reload);
 });
 
+// Static Server + watching scss/html files
+gulp.task('build-prod', ['build-jekyll-dev', 'sass', 'images', 'fonts', 'vendor'], function() {});
+
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function() {
-    return gulp.src("src/scss/*.scss")
+    return gulp.src("src/scss/styles.scss")
         .pipe(sass.sync().on('error', sass.logError))
         .pipe(gulp.dest("docs/css"))
-        .pipe(browserSync.stream());
-});
-
-// Copy index document in the production folder
-gulp.task('index', function() {
-    return gulp.src("src/index.html")
-        .pipe(gulp.dest("docs/"))
         .pipe(browserSync.stream());
 });
 
@@ -48,11 +44,13 @@ gulp.task('images', () =>
         .pipe(browserSync.stream())
 );
 
-// Rebuild Jekyll
-gulp.task('build-jekyll', (code) => {
-  return cp.spawn('C:\\Ruby23-x64\\bin\\jekyll.bat', ['build', '--incremental'], {stdio: 'inherit'}) // Adding incremental reduces build time.
-    .on('error', (error) => gutil.log(gutil.colors.red(error.message)))
-    .on('close', code);
-});
+// Build Jekyll Dev
+gulp.task('build-jekyll', shell.task(['bundle exec jekyll build --baseurl ""']));
 
+// Build Jekyll Prod
+gulp.task('build-jekyll-dev', shell.task(['bundle exec jekyll build --baseurl "/crop"']));
+
+// Project Build Options
 gulp.task('default', ['serve']);
+gulp.task('dev', ['serve']);
+gulp.task('prod', ['build-prod']);
