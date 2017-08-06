@@ -19,7 +19,7 @@ gulp.task('serve', ['build-jekyll', 'sass', 'images', 'fonts'], function() {
 });
 
 // Static Server + watching scss/html files
-gulp.task('build-prod', ['build-jekyll-dev', 'sass', 'images', 'fonts', 'vendor'], function() {});
+gulp.task('build-prod', ['build-jekyll-dev', 'sass', 'images', 'fonts'], function() {});
 
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function() {

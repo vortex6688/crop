@@ -1,4 +1,4 @@
-# AdviceNyc
+# Crop
 
 ## Instruction
 
@@ -9,7 +9,7 @@
 
 - Run `npm install` to install the dependencies 
 
-- To build a project, run `gulp`, it will build the project into `dist` folder and start the website in your browser automatically
+- To build a project, run `gulp`, it will build the project into `docs` folder and start the website in your browser automatically
 
 #### Note!
 
@@ -20,20 +20,10 @@ Make sure the port `:3000` is not used by other applications.
 
 ### Workflow instruction:
 
-- Any updates or changes should be made only in a `src/` folder, gulp will take care of it and rebuild the project into the`dist/` folder.
+- Any updates or changes should be made only in a `src/` folder, gulp will take care of it and rebuild the project into the`docs/` folder.
 
-Dist folder used as a `"Production"` part of the project.
+`docs` folder used as a `"Production"` part of the project.
 
-- Newly created issues should have a decent description, possibly screenshots if needed.
+To use a development built mode, run `gulp` or `gulp dev`
 
-- Once you decide to work on a certain issue, please assign yourself to it, so anyone else would know that you are already working on it, to avoid any possible confusion and save time...
-
-- To suggest any changes/updated, create a pull request and refer it to a certain issue, like so
-
-`"this pr closes #{link to an issue it resolves}"`
-
-Pr names should also reflect the issue they are referenced to, and include the issue's number, like so: 
-
-`"3 fix navbar layout margin"`
-
-- Ant time new PR is created, before merging it, it should be reviewed by another member of the developing team, then merged if approved.
+To use a production built mode, run `gulp prod` (note that this built will work to holt the website using github pages and it was not tested with any other hostings).

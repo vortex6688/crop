@@ -13,7 +13,7 @@ layout: page
     <title>{{ site.title }}</title>
     <meta name="description" content="{{ site.description }}">
 
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="{{site.baseurl}}/css/styles.css">
     <link rel="canonical" href="http://example.com/">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="http://example.com/feed.xml">
 </head>
@@ -24,14 +24,14 @@ layout: page
 
     {% include sidebar.html %}
 
-	<div class="page">
+	<div style="overflow: hidden;">
 
         <section class="content collapse-mobile">
             <div class="m-2 m-lg-4">
                 {% if page.title %}
                     <h3 class="page-title my-2">
                         {% if page.titleIcon %}
-                            <img class="icon-lg mb-2 page-title-icon" src="/images/icon-{{page.titleIcon}}.jpg" />
+                            <img class="icon-lg mb-2 page-title-icon" src="{{site.baseurl}}/images/icon-{{page.titleIcon}}.jpg" />
                         {% endif %}
                         {{page.title}}
                     </h3> 
@@ -43,12 +43,12 @@ layout: page
                         </span>
                         <span class="col-6 text-left">
                             {% if page.navPrev %}
-                                <a href="{{page.navPrevLink}}"><img class="icon mx-2" src="/images/icon-arrow-left.svg" /><b>{{page.navPrev}}</b></a>
+                                <a href="{{site.baseurl}}/{{page.navPrevLink}}"><img class="icon mx-2" src="{{site.baseurl}}/images/icon-arrow-left.svg" /><b>{{page.navPrev}}</b></a>
                             {% endif %}
                         </span>
                         <span class="col-6 text-right">
                             {% if page.navNext %}
-                                <a href="{{page.navNextLink}}"><b>{{page.navNext}}</b><img class="icon mx-2" src="/images/icon-arrow-right.svg" /></a>
+                                <a href="{{site.baseurl}}/{{page.navNextLink}}"><b>{{page.navNext}}</b><img class="icon mx-2" src="{{site.baseurl}}/images/icon-arrow-right.svg" /></a>
                             {% endif %}
                         </span>
                     </div>
