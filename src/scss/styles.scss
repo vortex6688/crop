@@ -54,3 +54,8 @@
 @import "header";
 @import "footer";
 @import "utilities-custom";
+
+html,
+body {
+  overflow-x: hidden;
+}

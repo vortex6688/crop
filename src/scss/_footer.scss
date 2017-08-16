@@ -1,7 +1,13 @@
 footer {
   margin-left: 16rem;
+  transition: all .275s ease;
+  overflow-x: hidden; 
 
   @include media-breakpoint-down(md) {
-    margin-left: 0;
+    margin-left: 12rem;
+
+    &.collapse-mobile {
+      margin-left: 0;
+    }
   }
 }

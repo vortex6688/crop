@@ -43,12 +43,12 @@ layout: page
                         </span>
                         <span class="col-6 text-left">
                             {% if page.navPrev %}
-                                <a href="{{site.baseurl}}/{{page.navPrevLink}}"><img class="icon mx-2" src="{{site.baseurl}}/images/icon-arrow-left.svg" /><b>{{page.navPrev}}</b></a>
+                                <a href="{{site.baseurl}}{{page.navPrevLink}}" style="white-space: nowrap"><img class="icon mx-2" src="{{site.baseurl}}/images/icon-arrow-left.svg" /><b>{{page.navPrev}}</b></a>
                             {% endif %}
                         </span>
                         <span class="col-6 text-right">
                             {% if page.navNext %}
-                                <a href="{{site.baseurl}}/{{page.navNextLink}}"><b>{{page.navNext}}</b><img class="icon mx-2" src="{{site.baseurl}}/images/icon-arrow-right.svg" /></a>
+                                <a href="{{site.baseurl}}{{page.navNextLink}}" style="white-space: nowrap"><b>{{page.navNext}}</b><img class="icon mx-2" src="{{site.baseurl}}/images/icon-arrow-right.svg" /></a>
                             {% endif %}
                         </span>
                     </div>

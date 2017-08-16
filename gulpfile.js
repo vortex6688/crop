@@ -6,7 +6,7 @@ var imagemin    = require('gulp-imagemin');
 var shell       = require('gulp-shell');
 
 // Static Server + watching scss/html files
-gulp.task('serve', ['build-jekyll', 'sass', 'images', 'fonts'], function() {
+gulp.task('serve', ['build-jekyll-dev', 'sass', 'images', 'fonts'], function() {
 
     browserSync.init({
         server: "./docs"
@@ -15,11 +15,11 @@ gulp.task('serve', ['build-jekyll', 'sass', 'images', 'fonts'], function() {
     gulp.watch("src/scss/**/*.scss", ['sass']).on('change', browserSync.reload);
     gulp.watch("src/images/**/*.*", ['images']).on('change', browserSync.reload);
     gulp.watch("src/images/**/*.*", ['fonts']).on('change', browserSync.reload);
-    gulp.watch("src/jekyll/**/*.html", ['build-jekyll']).on('change', browserSync.reload);
+    gulp.watch("src/jekyll/**/*.html", ['build-jekyll-dev']).on('change', browserSync.reload);
 });
 
-// Static Server + watching scss/html files
-gulp.task('build-prod', ['build-jekyll-dev', 'sass', 'images', 'fonts'], function() {});
+// Build production version for GH pages
+gulp.task('build-prod', ['build-jekyll-prod', 'sass', 'images', 'fonts'], function() {});
 
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function() {
@@ -45,10 +45,10 @@ gulp.task('images', () =>
 );
 
 // Build Jekyll Dev
-gulp.task('build-jekyll', shell.task(['bundle exec jekyll build --baseurl ""']));
+gulp.task('build-jekyll-dev', shell.task(['bundle exec jekyll build --baseurl ""']));
 
 // Build Jekyll Prod
-gulp.task('build-jekyll-dev', shell.task(['bundle exec jekyll build --baseurl "/crop"']));
+gulp.task('build-jekyll-prod', shell.task(['bundle exec jekyll build --baseurl "/crop"']));
 
 // Project Build Options
 gulp.task('default', ['serve']);

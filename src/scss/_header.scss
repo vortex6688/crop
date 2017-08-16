@@ -6,6 +6,7 @@ header {
   margin-left: 16rem;
   background: #f7f7f9;
   transition: all .275s ease;
+  position: relative;
 
   a:hover {
     text-decoration: none;
@@ -17,11 +18,8 @@ header {
 
   @include media-breakpoint-down(md) {
     margin-left: 12rem;
-    top: 0;
+    margin-right: -12rem;
     height: 12rem;
-    position: fixed;
-    z-index: $zindex-fixed;
-    width: 100%;
 
     h1 {
       font-size: 2.4rem;
@@ -37,6 +35,7 @@ header {
 
     &.collapse-mobile {
       margin-left: 0;
+      margin-right: 0;
     }
   }
 

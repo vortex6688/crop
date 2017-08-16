@@ -47,30 +47,15 @@
   </section>
 </header>
 
-<!-- header mobile 
-<header class="hidden-lg-up header-mobile collapse-mobile row w-100 m-0">
-
-  <div class="col d-flex flex-column ml-5 ml-sm-0 text-center">
-    <h1 class="mx-auto my-2"><a style="color: #e36c0a;" href="/">ТОРГОВЫЙ ДОМ «УРОЖАЙ»</a></h1>
-    <span class="col justify-content-center d-flex flex-wrap" style="font-size: 0.85rem;">
-      <b class="mx-1"><a href="#"><img class="icon" src="/images/icon-phone.svg" />+7 3812 373-378</a></b>
-      <b class="mx-1"><a href="#"><img class="icon-md" src="/images/icon-mail.svg" />td-urojai@mail.ru</a></b>
-    </span>
-  </div>
-
-  <div onclick="toggleNav()" class="" style="position: absolute; cursor: pointer;">
-    <img src="/images/logo.jpg" class="logo-mobile" />
-  </div>
-</header>
-
--->
-
     <sidebar class="h-100 collapse-mobile sidebar">
   <div class="logo">
     <img src="/crop/images/logo.jpg" />
   </div>
 
   <ul class="p-2 mt-2 nav flex-column">
+    <button type="button" class="close hidden-lg-up text-right" aria-label="Close">
+      <span aria-hidden="true" onclick="toggleNav()">&times;</span>
+    </button>
     <li class="nav-item">
       <a class="nav-link active" href="/crop/">Главная</a>
     </li>
@@ -277,7 +262,7 @@
 
 	</div>
 
-	<footer>
+	<footer class="footer collapse-mobile">
 
 	<section class="text-center">
 		<div id='copyright'>
@@ -290,6 +275,7 @@
 			document.querySelector(".sidebar").classList.toggle('collapse-mobile');
 			document.querySelector(".header").classList.toggle('collapse-mobile');
 			document.querySelector(".content").classList.toggle('collapse-mobile');
+			document.querySelector(".footer").classList.toggle('collapse-mobile');
 		}
 	</script>
 

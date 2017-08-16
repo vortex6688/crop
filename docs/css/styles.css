@@ -5989,6 +5989,9 @@ sidebar {
   background: #f7f7f9;
   width: 16rem;
   transition: all .275s ease; }
+  sidebar .close {
+    margin-top: -0.5rem;
+    outline: none; }
   sidebar img {
     width: 100%; }
   sidebar .logo {
@@ -6003,7 +6006,8 @@ sidebar {
     sidebar {
       width: 12rem;
       margin-left: 0;
-      font-size: 1rem; }
+      font-size: 1rem;
+      overflow-y: auto; }
       sidebar .logo {
         width: 12rem; }
       sidebar .nav-item .nav-link {
@@ -6017,8 +6021,7 @@ sidebar {
   overflow: hidden; }
   @media (max-width: 991px) {
     .content {
-      margin-left: 0;
-      margin-top: 14rem; }
+      margin-left: 0; }
       .content .page-title {
         text-align: center; }
       .content .page-title-icon {
@@ -6048,7 +6051,8 @@ header {
   height: 16rem;
   margin-left: 16rem;
   background: #f7f7f9;
-  transition: all .275s ease; }
+  transition: all .275s ease;
+  position: relative; }
   header a:hover {
     text-decoration: none; }
   @media (max-width: 1199px) {
@@ -6057,11 +6061,8 @@ header {
   @media (max-width: 991px) {
     header {
       margin-left: 12rem;
-      top: 0;
-      height: 12rem;
-      position: fixed;
-      z-index: 1030;
-      width: 100%; }
+      margin-right: -12rem;
+      height: 12rem; }
       header h1 {
         font-size: 2.4rem; }
       header .mobile-nav-trigger {
@@ -6071,7 +6072,8 @@ header {
         cursor: pointer;
         z-index: 2000; }
       header.collapse-mobile {
-        margin-left: 0; } }
+        margin-left: 0;
+        margin-right: 0; } }
   @media (max-width: 767px) {
     header h1 {
       font-size: 1.25rem;
@@ -6082,7 +6084,15 @@ header {
       padding-top: 0.7rem; } }
 
 footer {
-  margin-left: 16rem; }
+  margin-left: 16rem;
+  transition: all .275s ease;
+  overflow-x: hidden; }
   @media (max-width: 991px) {
     footer {
-      margin-left: 0; } }
+      margin-left: 12rem; }
+      footer.collapse-mobile {
+        margin-left: 0; } }
+
+html,
+body {
+  overflow-x: hidden; }
