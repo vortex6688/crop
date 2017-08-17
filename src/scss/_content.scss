@@ -5,26 +5,31 @@
   transition: all .275s ease;
   overflow: hidden;
 
-  @include media-breakpoint-down(md) {
-    margin-left: 0;
-
-
-    .page-title {
-      text-align: center;
-    }
-
-    .page-title-icon {
-      margin-left: -2rem;
-    }
+  .deals {
+    font-size: $font-size-lg;
+    line-height: 1.25;
   }
 
   @include media-breakpoint-down(md) {
     margin-left: 12rem;
     margin-right: -12rem;
 
+    .page-title {
+      text-align: center;
+      font-size: 1.8rem;
+    }
+
+    .page-subtitle {
+      font-size: $font-size-lg;
+    }
+
+    .page-title-icon {
+      margin-left: -2rem;
+    }
+
     &.collapse-mobile {
       margin-left: 0;
       margin-right: 0;
     }
-  } 
+  }
 }

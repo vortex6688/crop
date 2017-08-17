@@ -5989,6 +5989,12 @@ sidebar {
   background: #f7f7f9;
   width: 16rem;
   transition: all .275s ease; }
+  sidebar .copyright {
+    position: absolute;
+    font-size: 0.875rem;
+    color: #636c72;
+    bottom: .5rem;
+    left: 1rem; }
   sidebar .close {
     margin-top: -0.5rem;
     outline: none; }
@@ -6008,6 +6014,8 @@ sidebar {
       margin-left: 0;
       font-size: 1rem;
       overflow-y: auto; }
+      sidebar .copyright {
+        left: .5rem; }
       sidebar .logo {
         width: 12rem; }
       sidebar .nav-item .nav-link {
@@ -6019,17 +6027,20 @@ sidebar {
   margin-left: 16rem;
   transition: all .275s ease;
   overflow: hidden; }
-  @media (max-width: 991px) {
-    .content {
-      margin-left: 0; }
-      .content .page-title {
-        text-align: center; }
-      .content .page-title-icon {
-        margin-left: -2rem; } }
+  .content .deals {
+    font-size: 1.25rem;
+    line-height: 1.25; }
   @media (max-width: 991px) {
     .content {
       margin-left: 12rem;
       margin-right: -12rem; }
+      .content .page-title {
+        text-align: center;
+        font-size: 1.8rem; }
+      .content .page-subtitle {
+        font-size: 1.25rem; }
+      .content .page-title-icon {
+        margin-left: -2rem; }
       .content.collapse-mobile {
         margin-left: 0;
         margin-right: 0; } }
@@ -6083,16 +6094,20 @@ header {
       font-size: 1.125rem;
       padding-top: 0.7rem; } }
 
+/*
 footer {
   margin-left: 16rem;
   transition: all .275s ease;
-  overflow-x: hidden; }
-  @media (max-width: 991px) {
-    footer {
-      margin-left: 12rem; }
-      footer.collapse-mobile {
-        margin-left: 0; } }
+  overflow-x: hidden;
 
+  @include media-breakpoint-down(md) {
+    margin-left: 12rem;
+
+    &.collapse-mobile {
+      margin-left: 0;
+    }
+  }
+} */
 html,
 body {
   overflow-x: hidden; }
