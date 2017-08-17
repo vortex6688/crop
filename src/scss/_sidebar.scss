@@ -8,13 +8,13 @@ sidebar {
   background: $gray-lightest;
   width: 16rem;
   transition: all .275s ease;
+  overflow-y: auto;
 
   .copyright {
-    position: absolute;
     font-size: $font-size-sm;
     color: $gray-light;
-    bottom: .5rem;
-    left: 1rem;
+    margin-left: .5rem;
+    white-space: nowrap;
   }
 
   .close {
@@ -44,10 +44,9 @@ sidebar {
     width: 12rem;
     margin-left: 0;
     font-size: $font-size-base;
-    overflow-y: auto;
 
   .copyright {
-    left: .5rem;
+    margin-left: .25rem;
   }
 
     .logo {

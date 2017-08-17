@@ -5988,13 +5988,13 @@ sidebar {
   height: 100%;
   background: #f7f7f9;
   width: 16rem;
-  transition: all .275s ease; }
+  transition: all .275s ease;
+  overflow-y: auto; }
   sidebar .copyright {
-    position: absolute;
     font-size: 0.875rem;
     color: #636c72;
-    bottom: .5rem;
-    left: 1rem; }
+    margin-left: .5rem;
+    white-space: nowrap; }
   sidebar .close {
     margin-top: -0.5rem;
     outline: none; }
@@ -6012,10 +6012,9 @@ sidebar {
     sidebar {
       width: 12rem;
       margin-left: 0;
-      font-size: 1rem;
-      overflow-y: auto; }
+      font-size: 1rem; }
       sidebar .copyright {
-        left: .5rem; }
+        margin-left: .25rem; }
       sidebar .logo {
         width: 12rem; }
       sidebar .nav-item .nav-link {
