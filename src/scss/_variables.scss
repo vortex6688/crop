@@ -98,7 +98,7 @@ $red:    #d9534f !default;
 $orange: #e36c0a !default;
 $yellow: #ffd500 !default;
 $green:  #5cb85c !default;
-$blue:   #0275d8 !default;
+$blue:   #3b89cd !default;
 $teal:   #5bc0de !default;
 $pink:   #ff5b77 !default;
 $purple: #613d7c !default;
@@ -249,7 +249,7 @@ $font-family-serif:      Georgia, "Times New Roman", Times, serif !default;
 $font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base:       $font-family-sans-serif !default;
 
-$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+$font-size-base: 1rem * 1.125; // Assumes the browser default, typically `16px`
 $font-size-lg:   1.25rem !default;
 $font-size-sm:   .875rem !default;
 $font-size-xs:   .75rem !default;
