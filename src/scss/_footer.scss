@@ -1,14 +1,23 @@
-/*
 footer {
-  margin-left: 16rem;
-  transition: all .275s ease;
-  overflow-x: hidden;
+  .copyright {
+    white-space: nowrap;
+    font-size: $font-size-sm;
+    color: $gray-light;
+    bottom: 1rem;
+    margin-left: 18rem;
+  }
 
   @include media-breakpoint-down(md) {
-    margin-left: 12rem;
+    .copyright {
+      margin-left: 13rem;
+      margin-right: -13rem;
+    }
 
     &.collapse-mobile {
-      margin-left: 0;
+      .copyright {
+        margin-left: 1rem;
+        margin-right: 0;
+      }
     }
   }
-} */
+}

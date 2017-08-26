@@ -1,6 +1,31 @@
 // Some custom utilites styles
 
-html,
-body {
+html {
+  height: 100%;
   overflow-x: hidden;
+}
+
+body {
+  min-height: 100%;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+// Font utility classes
+
+.lead {
+  font-size: $lead-font-size;
+  font-weight: normal;
+}
+
+.table {
+  th {
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  thead th {
+    vertical-align: middle;
+  }
 }

@@ -2559,7 +2559,7 @@ tbody.collapse.show {
 
 .nav-link {
   display: block;
-  padding: 1.325em 0.5em 0.5em; }
+  padding: 0.75em 0.5em 0.5em; }
   .nav-link:focus, .nav-link:hover {
     text-decoration: none; }
   .nav-link.disabled {
@@ -5990,19 +5990,16 @@ sidebar {
   width: 16rem;
   transition: all .275s ease;
   overflow-y: auto; }
-  sidebar .copyright {
-    font-size: 0.875rem;
-    color: #636c72;
-    margin-left: .5rem;
-    white-space: nowrap; }
   sidebar .close {
-    margin-top: -0.5rem;
+    margin-top: -0.25rem;
     outline: none; }
   sidebar img {
     width: 100%; }
   sidebar .logo {
     width: 16rem;
     background: #fff; }
+  sidebar .nav {
+    position: relative; }
   sidebar .nav-item .nav-item {
     margin: 0rem 1rem;
     border-bottom: 1px rgba(168, 168, 168, 0.25) solid; }
@@ -6013,19 +6010,20 @@ sidebar {
       width: 12rem;
       margin-left: 0;
       font-size: 1.125rem; }
-      sidebar .copyright {
-        margin-left: .25rem; }
       sidebar .logo {
         width: 12rem; }
       sidebar .nav-item .nav-link {
-        padding: 1.325em 0.25em 0.5em; }
+        padding: 0.125em; }
+      sidebar .nav-item .nav-item .nav-link {
+        padding: 0.075rem; }
       sidebar.collapse-mobile {
         margin-left: -12rem; } }
 
 .content {
   margin-left: 16rem;
   transition: all .275s ease;
-  overflow: hidden; }
+  overflow: hidden;
+  flex: 1 0 auto; }
   .content .deals {
     font-size: 1.25rem;
     line-height: 1.25; }
@@ -6043,6 +6041,9 @@ sidebar {
       .content.collapse-mobile {
         margin-left: 0;
         margin-right: 0; } }
+  .content .sponsors img {
+    max-width: 75%;
+    height: auto; }
 
 .icon {
   height: 1rem;
@@ -6093,20 +6094,38 @@ header {
       font-size: 1.125rem;
       padding-top: 0.7rem; } }
 
-/*
-footer {
-  margin-left: 16rem;
-  transition: all .275s ease;
-  overflow-x: hidden;
+footer .copyright {
+  white-space: nowrap;
+  font-size: 0.875rem;
+  color: #636c72;
+  bottom: 1rem;
+  margin-left: 18rem; }
 
-  @include media-breakpoint-down(md) {
-    margin-left: 12rem;
+@media (max-width: 991px) {
+  footer .copyright {
+    margin-left: 13rem;
+    margin-right: -13rem; }
+  footer.collapse-mobile .copyright {
+    margin-left: 1rem;
+    margin-right: 0; } }
 
-    &.collapse-mobile {
-      margin-left: 0;
-    }
-  }
-} */
-html,
-body {
+html {
+  height: 100%;
   overflow-x: hidden; }
+
+body {
+  min-height: 100%;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column; }
+
+.lead {
+  font-size: 1.25rem;
+  font-weight: normal; }
+
+.table th {
+  text-align: center;
+  vertical-align: middle; }
+
+.table thead th {
+  vertical-align: middle; }

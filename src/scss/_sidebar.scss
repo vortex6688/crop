@@ -10,15 +10,8 @@ sidebar {
   transition: all .275s ease;
   overflow-y: auto;
 
-  .copyright {
-    font-size: $font-size-sm;
-    color: $gray-light;
-    margin-left: .5rem;
-    white-space: nowrap;
-  }
-
   .close {
-    margin-top: -0.5rem;
+    margin-top: -0.25rem;
     outline: none;
   }
 
@@ -29,6 +22,10 @@ sidebar {
   .logo {
     width: 16rem;
     background: $white;
+  }
+
+  .nav {
+    position: relative;
   }
 
   .nav-item .nav-item {
@@ -45,17 +42,19 @@ sidebar {
     margin-left: 0;
     font-size: $font-size-base;
 
-  .copyright {
-    margin-left: .25rem;
-  }
-
     .logo {
       width: 12rem;
     }
 
     .nav-item {
       .nav-link {
-        padding: 1.325em 0.25em 0.5em;
+        padding: 0.125em;
+      }
+    }
+
+    .nav-item .nav-item {
+      .nav-link {
+        padding: 0.075rem;
       }
     }
 
@@ -63,4 +62,6 @@ sidebar {
       margin-left: -12rem;
     }
   }
+
+
 }

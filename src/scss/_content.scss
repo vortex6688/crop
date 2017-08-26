@@ -4,6 +4,7 @@
   margin-left: 16rem;
   transition: all .275s ease;
   overflow: hidden;
+  flex: 1 0 auto;
 
   .deals {
     font-size: $font-size-lg;
@@ -30,6 +31,12 @@
     &.collapse-mobile {
       margin-left: 0;
       margin-right: 0;
+    }
+  }
+  .sponsors {
+    img {
+      max-width: 75%;
+      height: auto;
     }
   }
 }
