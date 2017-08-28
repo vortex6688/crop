@@ -4,7 +4,7 @@ header {
   font-size: $font-size-lg;
   height: 16rem;
   margin-left: 16rem;
-  background: #f7f7f9;
+  background: $gray-100;
   transition: all .275s ease;
   position: relative;
 
@@ -14,6 +14,10 @@ header {
 
   @include media-breakpoint-down(lg) {
     font-size: $font-size-base;
+
+    .sub-items {
+      font-size: $font-size-base-sm;
+    }
   }
 
   @include media-breakpoint-down(md) {

@@ -29,3 +29,16 @@ body {
     vertical-align: middle;
   }
 }
+
+@include media-breakpoint-up(lg) {
+  .hidden-lg-up {
+    display: none;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .hidden-sm-down {
+    display: none;
+  }
+}
+
