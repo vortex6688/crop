@@ -12,8 +12,16 @@
   }
 
   @include media-breakpoint-down(md) {
-    margin-left: 12rem;
-    margin-right: -12rem;
+    margin-left: 0;
+
+    &:before {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 100%; 
+      background: rgba(0, 0, 0, .5);
+      z-index: $zindex-modal-backdrop;
+    }
 
     table {
       th,
@@ -37,7 +45,10 @@
 
     &.collapse-mobile {
       margin-left: 0;
-      margin-right: 0;
+      &:before {
+        z-index: -1;
+        background: none;
+      }
     }
   }
   .sponsors {

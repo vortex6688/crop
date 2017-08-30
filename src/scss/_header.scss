@@ -21,9 +21,17 @@ header {
   }
 
   @include media-breakpoint-down(md) {
-    margin-left: 12rem;
-    margin-right: -12rem;
+    margin-left: 0;
     height: 12rem;
+
+    &:before {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 100%; 
+      background: rgba(0, 0, 0, .5);
+      z-index: $zindex-modal-backdrop;
+    }
 
     h1 {
       font-size: 2.4rem;
@@ -34,12 +42,15 @@ header {
       top: 0.75rem;
       left: 0.75rem;
       cursor: pointer;
-      z-index: 2000;
+      z-index: $zindex-modal-backdrop;
     }
 
     &.collapse-mobile {
       margin-left: 0;
-      margin-right: 0;
+      &:before {
+        z-index: -1;
+        background: none;
+      }
     }
   }
 

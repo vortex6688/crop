@@ -9,6 +9,7 @@ sidebar {
   width: 16rem;
   transition: all .275s ease;
   overflow-y: auto;
+  z-index: $zindex-modal;
 
   .close {
     margin-top: -0.25rem;
