@@ -6,7 +6,7 @@ var imagemin    = require('gulp-imagemin');
 var shell       = require('gulp-shell');
 
 // Static Server + watching scss/html files
-gulp.task('serve', ['build-jekyll-dev', 'sass', 'images', 'fonts'], function() {
+gulp.task('serve', ['build-jekyll-dev', 'sass', 'images', 'fonts', 'ds'], function() {
 
     browserSync.init({
         server: "./docs"
@@ -41,6 +41,13 @@ gulp.task('images', () =>
     gulp.src('src/images/*')
         .pipe(imagemin())
         .pipe(gulp.dest('docs/images'))
+        .pipe(browserSync.stream())
+);
+
+// Copy documents folder
+gulp.task('ds', () =>
+    gulp.src('src/ds/**/*.*')
+        .pipe(gulp.dest('docs/ds'))
         .pipe(browserSync.stream())
 );
 
