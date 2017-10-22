@@ -15,7 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: ТОРГОВЫЙ ДОМ «УРОЖАЙ»
 email: your-email@domain.com
-description: Friends (1994 - 2004) - is the one of the best TV Shows in the world!
+description: ТОРГОВЫЙ ДОМ «УРОЖАЙ»
 baseurl: "/crop" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  vortex6688
